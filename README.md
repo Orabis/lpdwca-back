@@ -1,13 +1,22 @@
 # 🚀 Getting started with Strapi
 
+```text
+# Don't forget to launch the database first with
+docker compose up  
+```
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
 ### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
 ```
-npm run develop
+if pnpm : 
+pnpm install
+# and
+pnpm approve-builds
+```
+```
+pnpm run develop
 # or
 yarn develop
 ```
@@ -17,7 +26,7 @@ yarn develop
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
 ```
-npm run start
+pnpm run start
 # or
 yarn start
 ```
@@ -27,7 +36,7 @@ yarn start
 Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
 ```
-npm run build
+pnpm run build
 # or
 yarn build
 ```
