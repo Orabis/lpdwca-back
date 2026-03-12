@@ -1,16 +1,15 @@
 services:
-  db:
-    container_name: postgres-db
-    platform: linux/amd64
-    image: postgres:12.0-alpine
+  postgres:
+    container_name: lpdwca_db
+    image: postgres:16-alpine
+    restart: unless-stopped
     env_file: .env
-    restart: always
     environment:
+      POSTGRES_DB: ${DATABASE_NAME}
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: ${DATABASE_NAME}
     volumes:
-      - strapi-data:/var/lib/postgresql/data/
+      - strapi-data:/var/lib/postgresql/data
     ports:
       - "${DATABASE_PORT}:5432"
 
