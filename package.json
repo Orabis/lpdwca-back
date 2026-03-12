@@ -19,19 +19,19 @@
     "@strapi/plugin-cloud": "5.33.0",
     "@strapi/plugin-users-permissions": "5.33.0",
     "@strapi/strapi": "5.33.0",
-    "fs-extra": "^10.0.0",
-    "mime-types": "^2.1.27",
+    "fs-extra": "^10.1.0",
+    "mime-types": "^2.1.35",
     "pg": "8.8.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
-    "styled-components": "^6.0.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.3",
+    "styled-components": "^6.3.11"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "typescript": "^5"
+    "@types/node": "^20.19.37",
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.9.3"
   },
   "engines": {
     "node": ">=20.0.0 <=24.x.x",
@@ -40,5 +40,13 @@
   "strapi": {
     "uuid": "0882e7ca-61cd-42bf-b7a4-1776a1369e83",
     "installId": "d2366d5c24ef6b021d5a740b5837e605785819d1926167ae169c5a324b0b433b"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
   }
 }

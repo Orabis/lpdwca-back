@@ -2,14 +2,18 @@
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
+## Utilisation 
+
+Merci d'utiliser pnpm qui est une amélioration majeure de NPM, son utilisation est tout aussi simple que npm :
+https://pnpm.io/fr/
 ### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
 ```
-npm run develop
-# or
-yarn develop
+pnpm install 
+---
+pnpm run develop
 ```
 
 ### `start`
@@ -17,19 +21,15 @@ yarn develop
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
 ```
-npm run start
-# or
-yarn start
-```
+pnpm run start
+
 
 ### `build`
 
 Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
 ```
-npm run build
-# or
-yarn build
+pnpm run build
 ```
 
 ## ⚙️ Deployment
