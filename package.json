@@ -16,10 +16,9 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "^5.47.0",
-    "@strapi/plugin-users-permissions": "^5.47.0",
-    "@strapi/strapi": "^5.47.0",
-    "better-sqlite3": "^12.10.0",
+    "@strapi/plugin-cloud": "5.39.0",
+    "@strapi/plugin-users-permissions": "5.39.0",
+    "@strapi/strapi": "5.39.0",
     "fs-extra": "^10.1.0",
     "mime-types": "^2.1.35",
     "pg": "8.8.0",
@@ -50,7 +49,14 @@
       "sharp"
     ]
   },
-  "bundleDependencies": [
-    "better-sqlite3"
-  ]
+  "overrides": {
+    "@strapi/admin": "5.39.0",
+    "@strapi/data-transfer": "5.39.0",
+    "@strapi/database": "5.39.0",
+    "@strapi/logger": "5.39.0",
+    "@strapi/permissions": "5.39.0",
+    "@strapi/types": "5.39.0",
+    "@strapi/typescript-utils": "5.39.0",
+    "@strapi/utils": "5.39.0"
+  }
 }
