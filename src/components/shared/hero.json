@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "name": "Hero",
+    "icon": "star",
+    "displayName": "En-tête immersif",
+    "description": "Premier écran de la page d'accueil"
+  },
+  "options": {},
+  "attributes": {
+    "accentWord": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    },
+    "subtext": {
+      "type": "text"
+    },
+    "ctaPrimaryLabel": {
+      "type": "string"
+    },
+    "ctaPrimaryHref": {
+      "type": "string"
+    },
+    "ctaSecondaryLabel": {
+      "type": "string"
+    },
+    "ctaSecondaryHref": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "logosAlt": {
+      "type": "string"
+    }
+  }
+}

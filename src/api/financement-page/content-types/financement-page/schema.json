@@ -1,0 +1,74 @@
+{
+  "kind": "singleType",
+  "collectionName": "financement_pages",
+  "info": {
+    "singularName": "financement-page",
+    "pluralName": "financement-pages",
+    "displayName": "Page Financement",
+    "description": "Dispositifs de financement, par parcours."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.page-header"
+    },
+    "switchContinuingLabel": {
+      "type": "string"
+    },
+    "switchApprenticeshipLabel": {
+      "type": "string"
+    },
+    "switchAriaLabel": {
+      "type": "string"
+    },
+    "continuingIntro": {
+      "type": "text"
+    },
+    "tuitionNote": {
+      "type": "text"
+    },
+    "fundingColumns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.funding-column"
+    },
+    "extraTitle": {
+      "type": "string"
+    },
+    "extraOptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.funding-item"
+    },
+    "extraNote": {
+      "type": "text"
+    },
+    "apprenticeshipIntro": {
+      "type": "text"
+    },
+    "apprenticeshipColumns": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.funding-column"
+    },
+    "apprenticeshipSummary": {
+      "type": "text"
+    },
+    "apprenticeshipCtaLabel": {
+      "type": "string"
+    },
+    "apprenticeshipCtaHref": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

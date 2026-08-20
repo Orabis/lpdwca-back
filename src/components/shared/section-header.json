@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_section_headers",
+  "info": {
+    "name": "SectionHeader",
+    "icon": "heading",
+    "displayName": "En-tête de section",
+    "description": "Titre, chapeau et bouton d'une section de page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "text"
+    },
+    "actionLabel": {
+      "type": "string"
+    },
+    "actionHref": {
+      "type": "string"
+    }
+  }
+}

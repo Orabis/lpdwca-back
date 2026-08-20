@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_cta_bands",
+  "info": {
+    "name": "Banded'appelàl'action",
+    "icon": "bullhorn",
+    "displayName": "Bande d'appel à l'action",
+    "description": "Bloc de relance en fin de page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    },
+    "primaryLabel": {
+      "type": "string"
+    },
+    "primaryHref": {
+      "type": "string"
+    },
+    "secondaryLabel": {
+      "type": "string"
+    },
+    "secondaryHref": {
+      "type": "string"
+    }
+  }
+}

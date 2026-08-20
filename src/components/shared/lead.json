@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_leads",
+  "info": {
+    "name": "Responsable",
+    "icon": "user",
+    "displayName": "Responsable",
+    "description": "Responsable scientifique de la formation"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "photoAlt": {
+      "type": "string"
+    },
+    "align": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ]
+    }
+  }
+}

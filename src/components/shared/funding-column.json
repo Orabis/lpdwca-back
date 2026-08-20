@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_funding_columns",
+  "info": {
+    "name": "Colonnedefinancement",
+    "icon": "columns",
+    "displayName": "Colonne de financement",
+    "description": "Un groupe de dispositifs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.funding-item"
+    }
+  }
+}

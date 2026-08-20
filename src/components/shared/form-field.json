@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_shared_form_fields",
+  "info": {
+    "name": "Champdeformulaire",
+    "icon": "keyboard",
+    "displayName": "Champ de formulaire",
+    "description": "Un champ du formulaire de contact"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "textarea": {
+      "type": "boolean",
+      "default": false
+    },
+    "full": {
+      "type": "boolean",
+      "default": false
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    }
+  }
+}

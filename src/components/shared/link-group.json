@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_link_groups",
+  "info": {
+    "name": "LinkGroup",
+    "icon": "bars",
+    "displayName": "Colonne de liens",
+    "description": "Une colonne du pied de page : un titre et ses liens"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}

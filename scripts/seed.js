@@ -3,7 +3,29 @@
 const fs = require('fs-extra');
 const path = require('path');
 const mime = require('mime-types');
-const { categories, authors, articles, global, about } = require('../data/data.json');
+const {
+  categories,
+  authors,
+  articles,
+  global,
+  about,
+  programReference,
+  navigation,
+  uiLabel,
+  homePage,
+  alumni,
+  faqThemes,
+  faqItems,
+  licencePage,
+  formationPage,
+  financementPage,
+  contactPage,
+  candidaturePage,
+  alumniPage,
+  elearningPage,
+  legalPage,
+  articlesPage,
+} = require('../data/data.json');
 
 async function seedExampleApp() {
   const shouldImportSeedData = await isFirstRun();
@@ -98,11 +120,15 @@ async function uploadFile(file, name) {
 }
 
 // Create an entry and attach files if there are any
-async function createEntry({ model, entry }) {
+// `publish` est necessaire pour les content-types en draft & publish :
+// depuis Strapi 5, passer publishedAt dans `data` ne publie pas l'entree,
+// elle reste en brouillon et l'API publique renvoie 404.
+async function createEntry({ model, entry, publish = false }) {
   try {
     // Actually create the entry in Strapi
-    await strapi.documents(`api::${model}.${model}`).create({
+    return await strapi.documents(`api::${model}.${model}`).create({
       data: entry,
+      ...(publish ? { status: 'published' } : {}),
     });
   } catch (error) {
     console.error({ model, entry, error });
@@ -115,6 +141,10 @@ async function checkFileExistsBeforeUpload(files) {
   const filesCopy = [...files];
 
   for (const fileName of filesCopy) {
+    // Un media absent n'est pas une erreur : tous les contenus n'ont pas d'illustration.
+    if (!fileName) continue;
+    if (!fs.existsSync(path.join('data', 'uploads', fileName))) continue;
+
     // Check if the file already exists in Strapi
     const fileWhereName = await strapi.query('plugin::upload.file').findOne({
       where: {
@@ -134,6 +164,7 @@ async function checkFileExistsBeforeUpload(files) {
     }
   }
   const allFiles = [...existingFiles, ...uploadedFiles];
+  if (allFiles.length === 0) return null;
   // If only one file then return only that file
   return allFiles.length === 1 ? allFiles[0] : allFiles;
 }
@@ -177,9 +208,8 @@ async function importArticles() {
         ...article,
         cover,
         blocks: updatedBlocks,
-        // Make sure it's not a draft
-        publishedAt: Date.now(),
       },
+      publish: true,
     });
   }
 }
@@ -216,6 +246,71 @@ async function importAbout() {
   });
 }
 
+async function importProgramReference() {
+  await createEntry({
+    model: 'program-reference',
+    entry: {
+      ...programReference,
+    },
+    publish: true,
+  });
+}
+
+async function importNavigation() {
+  await createEntry({ model: 'navigation', entry: { ...navigation }, publish: true });
+}
+
+async function importUiLabels() {
+  await createEntry({ model: 'ui-label', entry: { ...uiLabel }, publish: true });
+}
+
+async function importAlumni() {
+  for (const person of alumni) {
+    const photo = await checkFileExistsBeforeUpload([person.photo]);
+    await createEntry({ model: 'alumnus', entry: { ...person, photo }, publish: true });
+  }
+}
+
+async function importFaq() {
+  // Strapi 5 relie les entrees par documentId : on memorise celui de chaque
+  // theme a la creation plutot que de supposer des identifiants numeriques.
+  const themeIds = [];
+  for (const theme of faqThemes) {
+    const created = await createEntry({ model: 'faq-theme', entry: theme, publish: true });
+    themeIds.push(created?.documentId ?? null);
+  }
+  for (const item of faqItems) {
+    const { theme, ...rest } = item;
+    const documentId = themeIds[theme.id - 1];
+    await createEntry({
+      model: 'faq-item',
+      entry: { ...rest, ...(documentId ? { faq_theme: documentId } : {}) },
+      publish: true,
+    });
+  }
+}
+
+async function importHomePage() {
+  await createEntry({ model: 'home-page', entry: { ...homePage }, publish: true });
+}
+
+async function importPages() {
+  const pages = [
+    ['licence-page', licencePage],
+    ['formation-page', formationPage],
+    ['financement-page', financementPage],
+    ['contact-page', contactPage],
+    ['candidature-page', candidaturePage],
+    ['alumni-page', alumniPage],
+    ['elearning-page', elearningPage],
+    ['legal-page', legalPage],
+    ['articles-page', articlesPage],
+  ];
+  for (const [model, entry] of pages) {
+    await createEntry({ model, entry: { ...entry }, publish: true });
+  }
+}
+
 async function importCategories() {
   for (const category of categories) {
     await createEntry({ model: 'category', entry: category });
@@ -244,6 +339,22 @@ async function importSeedData() {
     author: ['find', 'findOne'],
     global: ['find', 'findOne'],
     about: ['find', 'findOne'],
+    'program-reference': ['find', 'findOne'],
+    navigation: ['find', 'findOne'],
+    'ui-label': ['find', 'findOne'],
+    alumnus: ['find', 'findOne'],
+    'faq-theme': ['find', 'findOne'],
+    'faq-item': ['find', 'findOne'],
+    'home-page': ['find', 'findOne'],
+    'licence-page': ['find', 'findOne'],
+    'formation-page': ['find', 'findOne'],
+    'financement-page': ['find', 'findOne'],
+    'contact-page': ['find', 'findOne'],
+    'candidature-page': ['find', 'findOne'],
+    'alumni-page': ['find', 'findOne'],
+    'elearning-page': ['find', 'findOne'],
+    'legal-page': ['find', 'findOne'],
+    'articles-page': ['find', 'findOne'],
   });
 
   // Create all entries
@@ -252,6 +363,13 @@ async function importSeedData() {
   await importArticles();
   await importGlobal();
   await importAbout();
+  await importProgramReference();
+  await importNavigation();
+  await importUiLabels();
+  await importAlumni();
+  await importFaq();
+  await importHomePage();
+  await importPages();
 }
 
 async function main() {

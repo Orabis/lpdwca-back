@@ -1,0 +1,83 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_pages",
+  "info": {
+    "singularName": "contact-page",
+    "pluralName": "contact-pages",
+    "displayName": "Page Contact",
+    "description": "Formulaire, messages et coordonnées."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.page-header"
+    },
+    "formTitle": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.form-field"
+    },
+    "submitLabel": {
+      "type": "string"
+    },
+    "consentText": {
+      "type": "text"
+    },
+    "consentLinkLabel": {
+      "type": "string"
+    },
+    "consentLinkHref": {
+      "type": "string"
+    },
+    "successMessage": {
+      "type": "text"
+    },
+    "errorMessage": {
+      "type": "text"
+    },
+    "infoCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contact-card"
+    },
+    "socialLabel": {
+      "type": "string"
+    },
+    "appointmentLabel": {
+      "type": "string"
+    },
+    "appointmentHref": {
+      "type": "string"
+    },
+    "companyTitle": {
+      "type": "string"
+    },
+    "companyIntro": {
+      "type": "text"
+    },
+    "companyArguments": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.info-card"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "officialContactLabel": {
+      "type": "string"
+    },
+    "officialContactHref": {
+      "type": "text"
+    }
+  }
+}

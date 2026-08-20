@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_social_links",
+  "info": {
+    "name": "SocialLink",
+    "icon": "share-alt",
+    "displayName": "Réseau social",
+    "description": "Compte social : icône, libellé accessible et URL"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "facebook",
+        "linkedin",
+        "twitter"
+      ],
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

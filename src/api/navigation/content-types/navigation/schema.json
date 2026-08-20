@@ -1,0 +1,73 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation",
+    "description": "Bandeau d'annonce, barre de navigation et pied de page. Ces éléments apparaissent sur toutes les pages du site."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bannerText": {
+      "type": "string",
+      "required": true
+    },
+    "bannerLinkLabel": {
+      "type": "string"
+    },
+    "bannerLinkHref": {
+      "type": "string"
+    },
+    "logoAlt": {
+      "type": "string",
+      "required": true
+    },
+    "mainLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "ctaLabel": {
+      "type": "string",
+      "required": true
+    },
+    "ctaHref": {
+      "type": "string",
+      "required": true
+    },
+    "footerSections": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link-group"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-link"
+    },
+    "socialTitle": {
+      "type": "string"
+    },
+    "legalLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "contactEmail": {
+      "type": "string"
+    },
+    "contactPhone": {
+      "type": "string"
+    },
+    "contactAddress": {
+      "type": "text"
+    },
+    "copyright": {
+      "type": "string"
+    }
+  }
+}

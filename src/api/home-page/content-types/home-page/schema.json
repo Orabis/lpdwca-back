@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Page d'accueil",
+    "description": "Tous les textes de la page d'accueil. Les témoignages et les questions fréquentes se gèrent dans leurs collections respectives."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
+    },
+    "partnersTitle": {
+      "type": "string"
+    },
+    "advantagesHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-header"
+    },
+    "advantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.numbered-card"
+    },
+    "articlesHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-header"
+    },
+    "coursesHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-header"
+    },
+    "courses": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.course-card"
+    },
+    "testimonialsHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-header"
+    },
+    "faqHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.section-header"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

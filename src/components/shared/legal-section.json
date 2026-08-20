@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_legal_sections",
+  "info": {
+    "name": "Sectionlégale",
+    "icon": "gavel",
+    "displayName": "Section légale",
+    "description": "Une section des mentions légales"
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "paragraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.paragraph"
+    },
+    "definitions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.definition"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    }
+  }
+}

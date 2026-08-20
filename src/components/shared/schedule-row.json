@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_schedule_rows",
+  "info": {
+    "name": "Lignedeplanning",
+    "icon": "calendar-day",
+    "displayName": "Ligne de planning",
+    "description": "Un jour de la semaine type"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "string",
+      "required": true
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    }
+  }
+}

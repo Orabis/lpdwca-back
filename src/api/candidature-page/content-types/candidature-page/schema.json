@@ -1,0 +1,90 @@
+{
+  "kind": "singleType",
+  "collectionName": "candidature_pages",
+  "info": {
+    "singularName": "candidature-page",
+    "pluralName": "candidature-pages",
+    "displayName": "Page Candidature",
+    "description": "Conditions d'accès, étapes, pièces et sessions d'information."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.page-header"
+    },
+    "eligibilityTitle": {
+      "type": "string"
+    },
+    "eligibilityPanels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.eligibility-panel"
+    },
+    "eligibilityNotes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.eligibility-panel"
+    },
+    "eligibilityNote": {
+      "type": "text"
+    },
+    "stepsTitle": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.step"
+    },
+    "documentsTitle": {
+      "type": "string"
+    },
+    "documentsIntro": {
+      "type": "text"
+    },
+    "documents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "documentsNote": {
+      "type": "text"
+    },
+    "sessionsTitle": {
+      "type": "string"
+    },
+    "sessionsIntro": {
+      "type": "text"
+    },
+    "sessionsEmpty": {
+      "type": "text"
+    },
+    "faqTitle": {
+      "type": "string"
+    },
+    "faqIntro": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.cta-band"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "pdfLabel": {
+      "type": "string"
+    },
+    "pdfHref": {
+      "type": "string"
+    }
+  }
+}

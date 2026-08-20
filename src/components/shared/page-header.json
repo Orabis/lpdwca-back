@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_page_headers",
+  "info": {
+    "name": "En-têtedepage",
+    "icon": "heading",
+    "displayName": "En-tête de page",
+    "description": "Titre principal et chapeau de la page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

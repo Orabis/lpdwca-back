@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_panels",
+  "info": {
+    "name": "Panneau",
+    "icon": "clone",
+    "displayName": "Panneau",
+    "description": "Regroupement de blocs"
+  },
+  "options": {},
+  "attributes": {
+    "blocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.panel-block"
+    }
+  }
+}

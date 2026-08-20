@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_stats_cards",
+  "info": {
+    "name": "Cartedestatistiques",
+    "icon": "chart-bar",
+    "displayName": "Carte de statistiques",
+    "description": "Indicateurs d'insertion professionnelle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "cardTitle": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "stats": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "linkLabel": {
+      "type": "string"
+    },
+    "href": {
+      "type": "text"
+    }
+  }
+}

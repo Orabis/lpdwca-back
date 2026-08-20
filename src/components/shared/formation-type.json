@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_formation_types",
+  "info": {
+    "name": "Typedeformation",
+    "icon": "id-card",
+    "displayName": "Type de formation",
+    "description": "Apprentissage ou formation continue"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "question": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "ctaHref": {
+      "type": "string"
+    }
+  }
+}
