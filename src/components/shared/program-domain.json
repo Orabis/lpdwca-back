@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_program_domains",
+  "info": {
+    "name": "Domaineduprogramme",
+    "icon": "sitemap",
+    "displayName": "Domaine du programme",
+    "description": "Un des trois domaines de la triple compétence"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "href": {
+      "type": "text"
+    }
+  }
+}

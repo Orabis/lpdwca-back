@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_steps",
+  "info": {
+    "name": "Étape",
+    "icon": "shoe-prints",
+    "displayName": "Étape",
+    "description": "Une étape de la procédure de candidature"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "string"
+    }
+  }
+}

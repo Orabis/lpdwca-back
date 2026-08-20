@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_panel_blocks",
+  "info": {
+    "name": "Blocdepanneau",
+    "icon": "square",
+    "displayName": "Bloc de panneau",
+    "description": "Un bloc titré du panneau Organisation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "mobileTitle": {
+      "type": "string"
+    },
+    "paragraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.paragraph"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    }
+  }
+}

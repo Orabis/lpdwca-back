@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_funding_items",
+  "info": {
+    "name": "Dispositifdefinancement",
+    "icon": "euro-sign",
+    "displayName": "Dispositif de financement",
+    "description": "Un dispositif, avec son explication"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

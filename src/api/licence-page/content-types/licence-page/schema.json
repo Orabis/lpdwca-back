@@ -1,0 +1,107 @@
+{
+  "kind": "singleType",
+  "collectionName": "licence_pages",
+  "info": {
+    "singularName": "licence-page",
+    "pluralName": "licence-pages",
+    "displayName": "Page Licence",
+    "description": "Programme, objectifs, unités d'enseignement, responsables, organisation, débouchés et insertion."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.page-header"
+    },
+    "levelNote": {
+      "type": "text"
+    },
+    "programTitle": {
+      "type": "string"
+    },
+    "programIntro": {
+      "type": "text"
+    },
+    "programCtaLabel": {
+      "type": "string"
+    },
+    "programCtaHref": {
+      "type": "string"
+    },
+    "programDomains": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.program-domain"
+    },
+    "objectivesTitle": {
+      "type": "string"
+    },
+    "objectivesText": {
+      "type": "text"
+    },
+    "curriculumTitle": {
+      "type": "string"
+    },
+    "semesters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.semester"
+    },
+    "leadsTitle": {
+      "type": "string"
+    },
+    "leadsIntro": {
+      "type": "text"
+    },
+    "leads": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.lead"
+    },
+    "organisationTitle": {
+      "type": "string"
+    },
+    "organisationPanels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.panel"
+    },
+    "afterTitle": {
+      "type": "string"
+    },
+    "afterPanels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.panel"
+    },
+    "insertionTitle": {
+      "type": "string"
+    },
+    "insertion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.stats-card"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "curriculumCtaLabel": {
+      "type": "string"
+    },
+    "curriculumCtaHref": {
+      "type": "text"
+    },
+    "pdfLabel": {
+      "type": "string"
+    },
+    "pdfHref": {
+      "type": "string"
+    }
+  }
+}

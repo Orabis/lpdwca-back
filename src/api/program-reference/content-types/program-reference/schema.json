@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "program_references",
+  "info": {
+    "singularName": "program-reference",
+    "pluralName": "program-references",
+    "displayName": "Références de la formation",
+    "description": "Données officielles du diplôme (RNCP, ECTS, volume horaire, tarif…), reprises du catalogue des formations de l'Université de Strasbourg. Affichées sur la page Mentions légales et destinées aux financeurs, prescripteurs et organismes de contrôle."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Références de la formation"
+    },
+    "intro": {
+      "type": "text",
+      "required": false
+    },
+    "catalogYear": {
+      "type": "string",
+      "required": false
+    },
+    "entries": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.definition"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "lastCheckedAt": {
+      "type": "date",
+      "required": false
+    }
+  }
+}

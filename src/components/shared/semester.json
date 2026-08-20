@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_semesters",
+  "info": {
+    "name": "Semestre",
+    "icon": "calendar",
+    "displayName": "Semestre",
+    "description": "Un semestre et ses unités d'enseignement"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "ariaLabel": {
+      "type": "string"
+    },
+    "gridModifier": {
+      "type": "string"
+    },
+    "ues": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.ue"
+    }
+  }
+}

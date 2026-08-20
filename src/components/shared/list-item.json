@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_list_items",
+  "info": {
+    "name": "Élémentdeliste",
+    "icon": "list-ul",
+    "displayName": "Élément de liste",
+    "description": "Une ligne d'une liste à puces"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_contact_cards",
+  "info": {
+    "name": "Cartedecontact",
+    "icon": "address-card",
+    "displayName": "Carte de contact",
+    "description": "Coordonnée affichée sur la page Contact"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "text"
+    },
+    "href": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_eligibility_panels",
+  "info": {
+    "name": "Panneaud'éligibilité",
+    "icon": "question-circle",
+    "displayName": "Panneau d'éligibilité",
+    "description": "Un cas de figure du « Suis-je concerné »"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

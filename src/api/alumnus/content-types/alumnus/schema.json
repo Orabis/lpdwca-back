@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alumnus_entries",
+  "info": {
+    "singularName": "alumnus",
+    "pluralName": "alumni",
+    "displayName": "Alumni",
+    "description": "Témoignages d'anciens. La version courte alimente la page d'accueil, la version longue la page Alumni."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "anchorId": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "context": {
+      "type": "string"
+    },
+    "track": {
+      "type": "enumeration",
+      "enum": [
+        "apprentissage",
+        "continue"
+      ],
+      "required": true
+    },
+    "background": {
+      "type": "string"
+    },
+    "shortQuote": {
+      "type": "text"
+    },
+    "quote": {
+      "type": "richtext"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "photoAlt": {
+      "type": "string"
+    },
+    "featuredOnHome": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

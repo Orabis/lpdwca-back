@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_course_cards",
+  "info": {
+    "name": "CourseCard",
+    "icon": "book",
+    "displayName": "Carte de cours",
+    "description": "Domaine enseigné : titre, description, illustration et destination"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "href": {
+      "type": "text"
+    }
+  }
+}

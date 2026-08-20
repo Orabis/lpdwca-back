@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "ui_labels",
+  "info": {
+    "singularName": "ui-label",
+    "pluralName": "ui-labels",
+    "displayName": "Libellés d'interface",
+    "description": "Textes courts réutilisés par plusieurs composants : boutons, liens de carte, états vides. Modifier une valeur ici la change partout sur le site."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "viewAll": {
+      "type": "string",
+      "required": true
+    },
+    "learnMore": {
+      "type": "string",
+      "required": true
+    },
+    "viewProgram": {
+      "type": "string",
+      "required": true
+    },
+    "readArticle": {
+      "type": "string",
+      "required": true
+    },
+    "viewArticles": {
+      "type": "string",
+      "required": true
+    },
+    "moreDetails": {
+      "type": "string"
+    },
+    "submitContact": {
+      "type": "string"
+    },
+    "submitting": {
+      "type": "string"
+    },
+    "articlesEmpty": {
+      "type": "text"
+    },
+    "coverFallback": {
+      "type": "string"
+    },
+    "menuOpen": {
+      "type": "string"
+    },
+    "menuClose": {
+      "type": "string"
+    },
+    "externalLinkSuffix": {
+      "type": "string"
+    }
+  }
+}

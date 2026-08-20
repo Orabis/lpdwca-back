@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_paragraphs",
+  "info": {
+    "name": "Paragraphe",
+    "icon": "paragraph",
+    "displayName": "Paragraphe",
+    "description": "Un paragraphe de texte"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_shared_ues",
+  "info": {
+    "name": "Unitéd'enseignement",
+    "icon": "graduation-cap",
+    "displayName": "Unité d'enseignement",
+    "description": "Une UE du programme"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "hours": {
+      "type": "string"
+    },
+    "lines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "short": {
+      "type": "boolean",
+      "default": false
+    },
+    "offset": {
+      "type": "enumeration",
+      "enum": [
+        "top",
+        "bottom"
+      ]
+    }
+  }
+}

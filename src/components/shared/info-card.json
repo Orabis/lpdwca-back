@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_info_cards",
+  "info": {
+    "name": "Carted'information",
+    "icon": "th-large",
+    "displayName": "Carte d'information",
+    "description": "Carte à icône avec une liste de points"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "text"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "ordered": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

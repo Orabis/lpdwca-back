@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_definitions",
+  "info": {
+    "name": "Definition",
+    "icon": "list",
+    "displayName": "Définition",
+    "description": "Couple libellé / valeur, pour une liste de références (code RNCP, ECTS, volume horaire…)"
+  },
+  "options": {},
+  "attributes": {
+    "term": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
