@@ -204,7 +204,7 @@
       }
     ],
     "ctaLabel": "Candidature",
-    "ctaHref": "/candidature/",
+    "ctaHref": "https://www.unistra.fr/fr/formation/admission/les-admissions-luniversite-strasbourg",
     "footerSections": [
       {
         "title": "Accueil",
@@ -881,7 +881,7 @@
         ]
       }
     ],
-    "leadsTitle": "Les responsables scientifiques",
+    "leadsTitle": "Les responsables de la formation",
     "leads": [
       {
         "name": "Éric Christoffel",
@@ -894,6 +894,11 @@
         "role": "Professeur des universités en sciences de l’information et de la communication, INSPÉ, Université de Strasbourg.",
         "photoAlt": "Portrait de Marc Trestini",
         "align": "right"
+      },
+      {
+        "name": "Maëlle Juif",
+        "role": "Référente apprentissage",
+        "align": "left"
       }
     ],
     "organisationTitle": "Organisation",
